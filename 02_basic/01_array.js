@@ -3,6 +3,7 @@
 //js array is resizable
 //DECLAREING ARRAY
 const arr=[0,1,2,3,4,5,6]
+const arr_3=[3,23,5,5]
 const arr_2= new Array(12,22,33)
 // console.log(arr_2)
 
@@ -36,3 +37,16 @@ console.log(arr.slice(1,4))
 //but modified array is [0,5,6]
 console.log(arr.splice(1,4))
 console.log(arr)
+//concat
+//spread oprator ... is used for concat multiple array
+console.log(...arr,...arr_3)
+
+//if we have multiple array in array we use flat method 
+
+
+//for data scrapping 
+//.isArray() gives true an flase
+//Array.from() its creat array
+console.log(Array.from("shivam"))
+//Array.of()
+
