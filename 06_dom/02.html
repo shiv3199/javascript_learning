@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learning dom</title>
+</head>
+
+<body>
+    <ul class="land">
+        <li>javscript</li>
+    </ul>
+</body>
+
+<script>
+    // const li=document.createElement("li");
+    // li.innerHTML=`python`;
+    // document.querySelector(".land").appendChild(li)
+
+    function langnam(lang) {
+        const li = document.createElement("li");
+        li.innerHTML = `${lang}`;
+        console.log(li)
+        document.querySelector(".land").appendChild(li)
+
+    }
+
+    langnam("pyhton")
+    langnam("mojo")
+    langnam('java')
+    //edit
+    const firstlang=document.querySelector('li:first-child')
+    const newli=document.createElement('li')
+    newli.textContent="rust";
+    firstlang.replaceWith(newli)
+    //remove
+    document.querySelector('li:last-child').remove()
+
+</script>
+
+</html>
