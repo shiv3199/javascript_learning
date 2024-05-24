@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first project</title>
+    <style>
+        .button{
+            border:2px solid black;
+            height: 10px;
+            width: 20px;
+        }
+        #red{
+            background-color: red;
+        }
+        #yellow{
+            background-color: yellow;
+        }
+        #blue{
+            background-color: blue;
+        }
+        #purple{
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+    <p>Hi this project change background color on button click</p>
+    <span class="button" id="red">red</span>
+    <span class="button" id="yellow">yellow</span>
+    <span class="button" id="blue">blue</span>
+    <span class="button" id="purple">purple</span>
+</body>
+<script>
+    const buttons=document.querySelectorAll(".button")
+    buttons.forEach((button)=>{
+        button.addEventListener('click',(e)=>{                  //on click event we have to use callback function
+            if(e.target.id==="red"){
+                document.body.style.backgroundColor=e.target.id
+            }
+            if(e.target.id==="yellow"){
+                document.body.style.backgroundColor=e.target.id
+            }
+            if(e.target.id==="blue"){
+                document.body.style.backgroundColor=e.target.id
+            }
+            if(e.target.id==="purple"){
+                document.body.style.backgroundColor=e.target.id
+            }
+        })
+            
+        
+    })
+</script>
+</html>
