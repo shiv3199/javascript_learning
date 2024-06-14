@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+
+<body>
+    <div id="head">
+        <h1 id="heading">This project will change the background color</h1>
+        <button id="start">start</button>
+        <button id="stop">stop</button>
+    </div>
+
+</body>
+<script>
+    const randomcolor = function () {
+        const hex = '0123456789ABCDEF'
+        let color = "#"
+        for (let i = 0; i < 6; i++) {
+
+            color += hex[Math.floor(Math.random() * 16)];
+
+        }
+        return color;
+    }
+    let change;
+    const startchange = function () {
+
+        function chnagebg () {
+            document.body.style.backgroundColor = randomcolor()
+        }  
+       change= setInterval(chnagebg, 1000)
+
+    }
+    const stopchange=function(){
+        clearInterval(change )
+    }
+    const start = document.querySelector('#start').addEventListener("click", startchange)
+    
+    const stop= document.querySelector('#stop').addEventListener("click",stopchange)
+
+</script>
+
+</html>
